@@ -4,8 +4,7 @@ These scripts estimate the predictability limits due to randomness and
 due to algorithm design in some methods of session-based recommendation.
 They can be used to reproduce the results in the Recsys 2019 paper:
 
-P. Järv. *Predictability limits in session-based next item recommen-
-dation* RecSys 2019, Copenhagen, Denmark, September 16–20, 2019.
+P. Järv. *Predictability limits in session-based next item recommendation* RecSys 2019, Copenhagen, Denmark, September 16–20, 2019.
 
 The datasets used come from session-based recommendation evaluation
 benchmark, as introduced in:
@@ -50,9 +49,6 @@ Entropy rate estimation:
 ./entropy.py data/retailrocket/seq/s0.txt
 ```
 
-The predictability limit can be computed using the entropy rate estimate
-S and the unique event count m that the script outputs.
-
 Multiple slices can be processed at once:
 
 ```
@@ -60,5 +56,12 @@ for i in 1 2 3 4; do ./dump_sequence.py -s ${i} data/retailrocket/slices/ events
 for i in 1 2 3 4; do ./entropy.py data/retailrocket/seq/s${i}.txt; done
 ```
 
+The predictability limit can be computed using the entropy rate estimate
+S and the unique event count m.
+
+The MATLAB script `predictability.m` computes the Pi^max value for a single
+sample and `pred_limits.m` over multiple datasets and slices (for that, put S
+results in a tab-separated file `entropy.tsv` and m values in `count.tsv`. Both
+files require a header row with dataset names).
 
 ## Limit for some algorithms
