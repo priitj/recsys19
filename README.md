@@ -77,6 +77,7 @@ in the training data.
 `"r_cnt"` in results is the total number of test cases examined.
 
 Interpreting the results:
+
 | Key        | Item to predict appears | Applies to algorithm  |
 | ------------- | ------------- | ----- |
 | cnt_next      | next to current item | MC, SF-SKNN |
