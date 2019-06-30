@@ -65,3 +65,23 @@ results in a tab-separated file `entropy.tsv` and m values in `count.tsv`. Both
 files require a header row with dataset names).
 
 ## Limit for some algorithms
+
+Calculate co-occurrence of the item to predict (in a recommendation
+accuracy test) and the current item (given to the recommender as an input)
+in the training data.
+
+```
+./find_limits.py  data/retailrocket/slices/ events
+```
+
+`"r_cnt"` in results is the total number of test cases examined.
+
+Interpreting the results:
+| Key        | Item to predict appears | Applies to algorithm  |
+| ------------- | ------------- | ----- |
+| cnt_next      | next to current item | MC, SF-SKNN |
+| cnt_fwd10     | among 10 items after current item | SR |
+| cnt_anywhere  | anywhere in session | AR, IKNN |
+| cnt_anywhere_sess | in session with any current session item | \*SKNN |
+
+
