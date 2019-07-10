@@ -26,23 +26,23 @@ Get the files in this repository:
 git clone https://github.com/priitj/recsys19.git
 ```
 
-Download the [source code](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAB6IzeGn2xTm67-5bpbsQDca/Source-Code?dl=0) of the session-based benchmark suite. Folders hosted on Dropbox can be downloaded as ZIP files by browsing into the folder and selecting "Download -> Direct download" from the menu.
-
-Extract it in the directory where we cloned this repository.
+Download the [source code](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAB6IzeGn2xTm67-5bpbsQDca/Source-Code?dl=1) of the session-based benchmark suite. Extract it in the directory where we cloned this repository.
 
 ```
 cd recsys19
 unzip Source-Code.zip
 ```
 
-This will also create an empty `data/` directory which will be used to hold the raw and preprocessed data. Download [datasets](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAAMMlmNKL-wAAYK8QWyL9MEa/Datasets?dl=0) and extract them under this folder, for example:
+This will also create an empty `data/` directory which will be used to hold the raw and preprocessed data.
+
+Download [datasets](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAAMMlmNKL-wAAYK8QWyL9MEa/Datasets?dl=0). Folders hosted on Dropbox can be downloaded separately as ZIP files by browsing into the folder and selecting "Download -> Direct download" from the menu. Extract the datasets under the `data/` directory, for example:
 
 ```
 cd data
 unzip nowplaying.zip
 ```
 
-As a result, there should be a file `nowplaying.csv` in the directory `data/nowplaying/raw/`. Edit the preprocessing scripts and change the `METHOD` variable to "slice" and the PATH_PROCESSED variable to point to the `slices` subdirectory under the dataset, for example `data/nowplaying/slices/`. Other options should be left as default.
+As a result, there should be a file `nowplaying.csv` in the directory `data/nowplaying/raw/`. Edit the preprocessing scripts and change the METHOD variable to "slice" and the PATH_PROCESSED variable to point to the `slices` subdirectory under the dataset, for example `data/nowplaying/slices/`. Other options should be left as default.
 
 Preprocessing scripts (excerpt from the original instructions):
 
