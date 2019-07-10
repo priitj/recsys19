@@ -26,7 +26,7 @@ Get the files in this repository:
 git clone https://github.com/priitj/recsys19.git
 ```
 
-Download the source code of the session-based benchmark suite. Folders hosted on Dropbox can be downloaded as ZIP files by browsing into the folder and selecting "Download -> Direct download" from the menu.
+Download the [source code](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAB6IzeGn2xTm67-5bpbsQDca/Source-Code?dl=0) of the session-based benchmark suite. Folders hosted on Dropbox can be downloaded as ZIP files by browsing into the folder and selecting "Download -> Direct download" from the menu.
 
 Extract it in the directory where we cloned this repository.
 
@@ -35,7 +35,7 @@ cd recsys19
 unzip Source-Code.zip
 ```
 
-This will also create an empty `data/` directory which will be used to hold the raw and preprocessed data. Download datasets and extract them under this folder, for example:
+This will also create an empty `data/` directory which will be used to hold the raw and preprocessed data. Download [datasets](https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AAAMMlmNKL-wAAYK8QWyL9MEa/Datasets?dl=0) and extract them under this folder, for example:
 
 ```
 cd data
