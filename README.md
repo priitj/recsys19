@@ -14,26 +14,45 @@ Ludewig, M., & Jannach, D. (2018). *Evaluation of session-based recommendation a
 ## Dependencies
 
 - Python 3
-- datasets and scripts from  https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AACldzQWbw-igKjcPTBI6ZPAa
+- datasets and source code from  https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AACldzQWbw-igKjcPTBI6ZPAa
 
 ## Preparation
 
-The benchmark framework is easiest to work with when the the datasets
-are extracted under the `data/` subdirectory. Put `entropy.py` and other
-scripts in the top level directory of the benchmark framework.
+To reproduce the experiments, the datasets need to be preprocessed into 5-way testing and training splits. Use the scripts that come with the session-based recommendation evaluation benchmark and datasets.
 
-The datasets need to preprocessed into slice files with default settings.
+Get the files in this repository:
 
-Excerpt from the original instructions:
+```
+git clone https://github.com/priitj/recsys19.git
+```
 
-  1. Unzip any dataset file to the data folder, i.e., rsc15-clicks.dat will then be in the folder data/rsc15/raw
-  2. Open the script run_preprocessing\*.py to configure the preprocessing method and parameters
-        * run_preprocessing_rsc15.py is for the RecSys challenge dataset.
-        * run_preprocessing_tmall.py is for the TMall logs.
-        * run_preprocessing_retailrocket.py is for the Retailrocket competition dataset.
-        * run_preprocessing_clef.py is for the Plista challenge dataset.
-        * run_preprocessing_music.py is for all music datasets (configuration of the input and output path inside the file).
-  3. Run the script
+Download the source code of the session-based benchmark suite. Folders hosted on Dropbox can be downloaded as ZIP files by browsing into the folder and selecting "Download -> Direct download" from the menu.
+
+Extract it in the directory where we cloned this repository.
+
+```
+cd recsys19
+unzip Source-Code.zip
+```
+
+This will also create an empty `data/` directory which will be used to hold the raw and preprocessed data. Download datasets and extract them under this folder, for example:
+
+```
+cd data
+unzip nowplaying.zip
+```
+
+As a result, there should be a file `nowplaying.csv` in the directory `data/nowplaying/raw/`. Edit the preprocessing scripts and change the `METHOD` variable to "slice" and the PATH_PROCESSED variable to point to the `slices` subdirectory under the dataset, for example `data/nowplaying/slices/`. Other options should be left as default.
+
+Preprocessing scripts (excerpt from the original instructions):
+
+* run_preprocessing_rsc15.py is for the RecSys challenge dataset.
+* run_preprocessing_tmall.py is for the TMall logs.
+* run_preprocessing_retailrocket.py is for the Retailrocket competition dataset.
+* run_preprocessing_clef.py is for the Plista challenge dataset.
+* run_preprocessing_music.py is for all music datasets (configuration of the input and output path inside the file).
+
+Run the preprocessing scripts for the datasets downloaded.
 
 ## Limit using entropy rate estimation
 
