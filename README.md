@@ -15,6 +15,7 @@ Ludewig, M., & Jannach, D. (2018). *Evaluation of session-based recommendation a
 
 - Python 3
 - datasets and source code from  https://www.dropbox.com/sh/dbzmtq4zhzbj5o9/AACldzQWbw-igKjcPTBI6ZPAa
+- MATLAB to compute entropy based predictability values
 
 ## Preparation
 
